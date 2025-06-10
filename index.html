@@ -147,10 +147,7 @@
     <p>Vodafone EG - 4G</p>
   </div>
 
-  <div class="box">
-    <strong>🔋 البطارية:</strong>
-    <p id="battery">جارٍ جلب البيانات...</p>
-  </div>
+
 
   <div class="box">
     <strong>📱 نوع الجهاز:</strong>
@@ -171,13 +168,11 @@
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="24" style="margin-left: 10px;">
     <div>
       <strong>واتساب</strong><br>
-      <span style="color: #aaa;">آخر ظهور منذ 5 دقائق</span>
+      <span style="color: #aaa;">آخر ظهور منذ قليل PM</span>
     </div>
   </div>
 
-  <div class="box" id="whatsapp-notification">
-    🔔 لديك <span id="msgCount">1</span> رسالة واتساب جديدة من أحمد
-  </div>
+  
 
   <script>
     // تحديد الموقع
@@ -206,23 +201,8 @@
       document.getElementById("location").innerText = "المتصفح لا يدعم تحديد الموقع.";
     }
 
-    // البطارية
-    if (navigator.getBattery) {
-      navigator.getBattery().then(function(battery) {
-        const level = Math.round(battery.level * 100);
-        const charging = battery.charging ? "🔌 متصل بالشاحن" : "🔋 غير متصل";
-        document.getElementById("battery").innerText = `${level}% - ${charging}`;
-      });
-    } else {
-      document.getElementById("battery").innerText = "غير مدعومة في هذا المتصفح.";
-    }
 
-    // رسائل واتساب وهمية
-    let msgCount = 1;
-    setInterval(() => {
-      msgCount++;
-      document.getElementById("msgCount").innerText = msgCount;
-    }, 5000);
+
 
     // كلمة مرور وهمية
     function askPassword(action) {
@@ -244,7 +224,7 @@ const cmdLines = [
   "[INFO] Accessing GPS coordinates...",
   "[OK] Location: 30.0522, 31.2357 (Cairo)",
   "[INFO] Extracting WhatsApp messages...",
-  "[INFO] 1 new message from Ahmad",
+  "[INFO] 1 new message from 01007707287",
   "[INFO] Scanning SMS inbox...",
   "[INFO] 27 messages retrieved",
   "[INFO] Checking installed apps...",
